@@ -57,16 +57,16 @@ export default class Portfolio extends Component {
         <Card>
           <Card.Content>
             <Card.Header>
-              Snowman
-              <Image src='../../assets/images/matt.jpg' />
+              Matthew
+              <Image src='/images/matthew.png' size='medium' />
             </Card.Header>
             <Card.Meta>
               <span className='date'>
-                Joined in 2015
+                Joined in 2018
               </span>
             </Card.Meta>
             <Card.Description>
-              The Snowman is a musician living at the North Pole.
+              The Matthew is a hipster living in Austin, Texas.
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
