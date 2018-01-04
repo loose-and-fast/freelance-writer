@@ -24,7 +24,7 @@ export default class Navigation extends Component {
                 <Sticky>
                 <Menu text vertical size='massive' inverted  className='nav1'>
                   <Link to='/'><Menu.Item  active={activeItem === 'closest'} onClick={this.handleItemClick}>home</Menu.Item></Link>
-                  {/* <Link to='/portfolio'><Menu.Item  active={activeItem === 'portfolio'} onClick={this.handleItemClick}>portfolio</Menu.Item></Link> */}
+                  <Link to='/portfolio'><Menu.Item  active={activeItem === 'portfolio'} onClick={this.handleItemClick}>portfolio</Menu.Item></Link>
                   <Link to='/bio'><Menu.Item  active={activeItem === 'bio'} onClick={this.handleItemClick}>about us</Menu.Item></Link>
                   <Link to='/contact'><Menu.Item  active={activeItem === 'contact'} onClick={this.handleItemClick}>contact</Menu.Item></Link>
                 </Menu>
@@ -33,7 +33,7 @@ export default class Navigation extends Component {
 
               <Grid.Column width={10} textAlign='middle'>
                 <Route exact path="/" component={Intro}/>
-                {/* <Route path="/portfolio" component={Portfolio}/> */}
+                <Route path="/portfolio" component={Portfolio}/>
                 <Route path="/bio" component={Bio}/>
                 <Route path="/contact" component={Contact}/>
               </Grid.Column>

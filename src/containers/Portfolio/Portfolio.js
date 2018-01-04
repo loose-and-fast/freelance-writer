@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import {Header, List, Grid} from 'semantic-ui-react'
+import { Card, Grid, Header, Icon, Image, List } from 'semantic-ui-react'
 import './Portfolio.css'
-import PortfolioSection from '../../components/PortfolioSection/PortfolioSection.js'
-import data from '../../portfolio.json'
+// import PortfolioSection from '../../components/PortfolioSection/PortfolioSection.js'
+// import data from '../../portfolio.json'
 
 export default class Portfolio extends Component {
   constructor(props) {
@@ -19,30 +19,64 @@ export default class Portfolio extends Component {
     }
   }
 
-  componentWillMount() {
-    this.portfolioItems = this.state.categories.map((category) => {
-      let items = data.Portfolio.filter((item) => {
-        return item.category === category[1];
-      });
-
-      return (
-        <PortfolioSection category={category[0]} items={items} />
-      );
-    });
-  }
-
   render() {
     return (
-          <Grid.Row>
-            <List size='big' as='ol'>
-              <List.Item>
-                <List.Content>
-                  <Header size='huge' className='page__title'>Portfolio</Header>
-                  <List.List as='ol' children={this.portfolioItems}></List.List>
-                </List.Content>
-              </List.Item>
-            </List>
-          </Grid.Row>
+      <div>
+        <Grid.Row>
+          <List size='big' as='ol'>
+            <List.Item>
+              <List.Content>
+                <Header size='huge' className='page__title'>Portfolio</Header>
+                <List.List as='ol' children={this.portfolioItems}></List.List>
+              </List.Content>
+            </List.Item>
+          </List>
+        </Grid.Row>
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              Snowman
+              <Image src='https://i.pinimg.com/236x/b1/e9/05/b1e905065b933c63240dc500029250a5--christmas-time-christmas-ideas.jpg' />
+            </Card.Header>
+            <Card.Meta>
+              <span className='date'>
+                Joined in 2015
+              </span>
+            </Card.Meta>
+            <Card.Description>
+              The Snowman is a musician living at the North Pole.
+            </Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <a>
+              <Icon name='user' />
+              22 Friends
+            </a>
+          </Card.Content>
+        </Card>
+        <Card>
+          <Card.Content>
+            <Card.Header>
+              Snowman
+              <Image src='../../assets/images/matt.jpg' />
+            </Card.Header>
+            <Card.Meta>
+              <span className='date'>
+                Joined in 2015
+              </span>
+            </Card.Meta>
+            <Card.Description>
+              The Snowman is a musician living at the North Pole.
+            </Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <a>
+              <Icon name='user' />
+              22 Friends
+            </a>
+          </Card.Content>
+        </Card>
+      </div>
     )
   }
 }

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import {Grid, Header, Container} from 'semantic-ui-react'
+import React from 'react'
+import {Grid, Container} from 'semantic-ui-react'
 import './Bio.css'
 import BioSection from '../BioSection/BioSection'
 // import bio from '../../bio.txt'

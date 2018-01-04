@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Intro from './components/Intro/Intro.js'
+// import Intro from './components/Intro/Intro.js'
 import Navigation from './containers/Navigation/Navigation.js'
 import './App.css';
 
